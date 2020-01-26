@@ -67,7 +67,10 @@ ggplot(., mapping = aes(x = year, y = people, color = Region))+
   scale_y_log10()+
    xlab("Year")+
    ylab("Number of people living with HIV")+
-  ggtitle("Number of people living with HIV by year")
+  ggtitle("Number of people living with HIV by year")+
+  labs(
+   caption = "Shows the number of people living with HIV broken out by region, over the course of 18 years. Africa shows notably higher numbers than all other regions."
+  )
 ```
 
 ![](earnold-assignment2_files/figure-markdown_github/create%20visualization-1.png)
@@ -92,7 +95,8 @@ ggplot(., mapping = aes(x = Country, y = people, color = Country))+
   ylab("Number of people living with HIV")+
   ggtitle("Number of people living with HIV by Country in the Americas", subtitle = "Faceted by Year")+
   theme(axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
+        axis.ticks.x=element_blank())+
+  labs(caption = "Shows the number of people living with HIV broken out by country within the Americas region, over the course of 18 years. Brazil shows notably higher numbers than all other countries")
 ```
 
 ![](earnold-assignment2_files/figure-markdown_github/create%20visualization%202-1.png)

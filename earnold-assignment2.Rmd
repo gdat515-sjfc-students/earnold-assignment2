@@ -66,7 +66,10 @@ ggplot(., mapping = aes(x = year, y = people, color = Region))+
   scale_y_log10()+
    xlab("Year")+
    ylab("Number of people living with HIV")+
-  ggtitle("Number of people living with HIV by year")
+  ggtitle("Number of people living with HIV by year")+
+  labs(
+   caption = "Shows the number of people living with HIV broken out by region, over the course of 18 years. Africa shows notably higher numbers than all other regions."
+  )
    
 ```
 
@@ -86,7 +89,8 @@ ggplot(., mapping = aes(x = Country, y = people, color = Country))+
   ylab("Number of people living with HIV")+
   ggtitle("Number of people living with HIV by Country in the Americas", subtitle = "Faceted by Year")+
   theme(axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
+        axis.ticks.x=element_blank())+
+  labs(caption = "Shows the number of people living with HIV broken out by country within the Americas region, over the course of 18 years. Brazil shows notably higher numbers than all other countries")
 ```
 
 I think the most important takeaways from this visual is that Brazil consistently represents the highest count of HIV cases, except for in 2010 when the USA experienced a notable spike. Digging further into the data, it looks like data from the US is missing for all years shown here except 2010. 
