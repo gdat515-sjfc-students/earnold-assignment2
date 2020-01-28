@@ -68,8 +68,7 @@ ggplot(., mapping = aes(x = year, y = people, color = Region))+
    xlab("Year")+
    ylab("Number of people living with HIV")+
   ggtitle("Number of people living with HIV by year")+
-  labs(
-   caption = "Shows the number of people living with HIV broken out by region, over the course of 18 years. Africa shows notably higher numbers than all other regions."
+  labs(caption = "Shows the number of people living with HIV broken out by region, over the course of 18 years. Africa shows notably higher numbers than all other regions."
   )
 ```
 
